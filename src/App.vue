@@ -1,23 +1,32 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
-  </div>
+    <div id="app">
+        <page-header />
+        <router-view />
+    </div>
 </template>
 
 <script>
-export default {
-  name: 'App'
-}
+    import PageHeader from './components/PageHeader.vue';
+
+    export default {
+      name: 'App',
+      components: {
+          PageHeader
+      }
+    }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+    @import url('https://fonts.googleapis.com/css?family=Cabin|Francois+One|Space+Mono');
+
+    body {
+        margin: 0;
+
+        background-image: url("./assets/background.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: Cabin, sans-serif;
+        font-size: 16px;
+    }
 </style>
